@@ -29,7 +29,6 @@ def game_resursion(round, num):
 
 
 if __name__ == '__main__':
-
     print('Первому игроку приготовиться: вход в игру - "Угадай число"')
     print('Количество попыток: 10')
     game_resursion(10, randint(0, 100))

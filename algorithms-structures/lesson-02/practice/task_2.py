@@ -20,10 +20,11 @@
 
 
 def sum_recursion(num, lst=[0, 0]):
-    if num <= 0:
-        return lst
 
     lst[0 if (num % 10) % 2 == 0 else 1] += 1
+
+    if num < 10:
+        return lst
 
     return sum_recursion(num // 10, lst)
 

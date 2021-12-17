@@ -38,7 +38,7 @@ def calc_recursion():
         calc_recursion()
 
     if operation == '0':
-       exit(0)
+        exit(0)
 
     num1 = int(input('Введите первое число: '))
     num2 = int(input('Введите второе число: '))

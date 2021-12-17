@@ -21,9 +21,9 @@
 
 def reverse_digit_recursion(num):
     if num <= 0:
-        return ''
+        return 0
 
-    return int(str(num % 10) + str(reverse_digit_recursion(num // 10)))
+    return (num % 10) * (10 ** (len(str(num)) - 1)) + reverse_digit_recursion(num // 10)
 
 
 if __name__ == '__main__':
