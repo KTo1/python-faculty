@@ -20,8 +20,8 @@
 
 
 def reverse_digit_recursion(num):
-    if num <= 0:
-        return ''
+    if num < 10:
+        return str(num % 10)
 
     return str(num % 10) + reverse_digit_recursion(num // 10)
 
