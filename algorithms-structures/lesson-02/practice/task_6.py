@@ -20,6 +20,7 @@ def game_resursion(round, num):
     user_num = int(input('Введите число (0..100): '))
     if user_num == num:
         print(f'Да, это число {num}. Вы выиграли.')
+        print(f'Гейм, как говорится, овер.')
         return
 
     print('Не угадали, меньше.' if user_num > num else 'Не угадали, больше.')
@@ -29,6 +30,6 @@ def game_resursion(round, num):
 
 if __name__ == '__main__':
 
-    print('Первому игроку приготовиться: загружается игра "Угадай число"')
+    print('Первому игроку приготовиться: вход в игру - "Угадай число"')
     print('Количество попыток: 10')
     game_resursion(10, randint(0, 100))

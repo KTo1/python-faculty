@@ -12,3 +12,18 @@
 
 Решите через рекурсию. Решение через цикл не принимается.
 """
+
+
+def sum_recursion(n):
+    if n <= 0:
+        return 0
+    return n + sum_recursion(n - 1)
+
+
+if __name__ == '__main__':
+    n = 5
+    print(f'n = {n}, сумма рекурсией: {sum_recursion(n)}, сумма по формуле (n(n+1)/2): {n * (n + 1) / 2}')
+    n = 100
+    print(f'n = {n}, сумма рекурсией: {sum_recursion(n)}, сумма по формуле (n(n+1)/2): {n * (n + 1) / 2}')
+    n = 23
+    print(f'n = {n}, сумма рекурсией: {sum_recursion(n)}, сумма по формуле (n(n+1)/2): {n * (n + 1) / 2}')
