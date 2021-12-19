@@ -22,3 +22,15 @@ f1dcaeeafeb855965535d77c55782349444b
 воспользуйтесь базой данный sqlite, postgres и т.д.
 п.с. статья на Хабре - python db-api
 """
+
+import redis
+
+if __name__ == '__main__':
+    r = redis.StrictRedis(host='192.168.25.108',
+                          port=6379,
+                          password='',
+                          charset='utf-8',
+                          decode_responses=True)
+
+    r.set('first', 'kto')
+    print(r.get('first'))
