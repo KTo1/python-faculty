@@ -24,7 +24,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.task_4">
+  <component name="RunManager" selected="Python.task_1">
     <configuration name="task_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algorithms-structures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,9 +132,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task_1" />
         <item itemvalue="Python.task_4" />
         <item itemvalue="Python.task_3" />
-        <item itemvalue="Python.task_1" />
         <item itemvalue="Python.task_2" />
         <item itemvalue="Python.task_6" />
       </list>
@@ -155,6 +155,7 @@
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="str[j:j + i]" />
+        <watch expression="dct[i]" />
       </configuration>
     </watches-manager>
   </component>
