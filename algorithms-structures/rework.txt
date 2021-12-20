@@ -1,4 +1,4 @@
 Я Бородич Василий, с курса "Алгоритмы и структуры данных на Python. Базовый курс" (старт: 11.12.2021)
-Хочу пересдать задание к уроку 1, прикладываю ссылку на ПР с доработкой:
-https://github.com/DmitryChitalov/algorithms_2022/pull/6/commits/d91ee40af4229c3f183427e34b2448c9efd526b2
+Хочу пересдать задание к уроку 2, прикладываю ссылку на ПР с доработкой:
+https://github.com/DmitryChitalov/algorithms_2022/pull/16/commits/4c388c05a8d8b5ee0238b0b1cd6a223e7a2d32bd
 

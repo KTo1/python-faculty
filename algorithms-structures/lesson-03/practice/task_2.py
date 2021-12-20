@@ -21,16 +21,35 @@ f1dcaeeafeb855965535d77c55782349444b
 или, если вы уже знаете, как Python взаимодействует с базами данных,
 воспользуйтесь базой данный sqlite, postgres и т.д.
 п.с. статья на Хабре - python db-api
+
+У нас на курсе БД была задача по Redis.
 """
 
 import redis
+from random import randint
+from hashlib import sha256
+
+
+def validate(password, vault):
+    salt = vault.get(password)
+    if salt:
+        return vault.get(password + salt) == sha256(salt.encode('utf-8') + password.encode('utf-8')).hexdigest()
+    else:
+        salt = str(randint(1, 100000))
+        hash = sha256(salt.encode('utf-8') + password.encode('utf-8')).hexdigest()
+        vault.set(password, salt)
+        vault.set(password + salt, hash)
+        return hash
+
 
 if __name__ == '__main__':
-    r = redis.StrictRedis(host='192.168.25.108',
-                          port=6379,
-                          password='',
-                          charset='utf-8',
-                          decode_responses=True)
+    vault = redis.StrictRedis(host='192.168.25.108',
+                              port=6379,
+                              password='',
+                              charset='utf-8',
+                              decode_responses=True)
 
-    r.set('first', 'kto')
-    print(r.get('first'))
+    password = input('Введите пароль: ')
+    print(validate(password, vault))
+    password = input('Введите пароль еще раз для проверки: ')
+    print(f'Вы ввели {"верный" if validate(password, vault) else "неверный"} пароль')
