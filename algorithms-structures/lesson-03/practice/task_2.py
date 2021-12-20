@@ -22,7 +22,12 @@ f1dcaeeafeb855965535d77c55782349444b
 воспользуйтесь базой данный sqlite, postgres и т.д.
 п.с. статья на Хабре - python db-api
 
-У нас на курсе БД была задача по Redis.
+
+У нас на курсе БД было знакомство с Redis. С тех пор хочется его где-нибудь применить.
+Думаю он вполне подойдет для этой задачи.
+Идея такая: при старте заружать данные в редис, с целью снижения затрат на процедуры
+аутентификации и авторизации, но может так и не делается)
+
 """
 
 import redis
@@ -31,14 +36,15 @@ from hashlib import sha256
 
 
 def validate(password, vault):
-    salt = vault.get(password)
-    if salt:
-        return vault.get(password + salt) == sha256(salt.encode('utf-8') + password.encode('utf-8')).hexdigest()
+    pwd_data = vault.lrange(password, 0, 1)
+    if pwd_data:
+        salt, hash = vault.lindex(password, 0), vault.lindex(password, 1)
+        return hash == sha256(salt.encode('utf-8') + password.encode('utf-8')).hexdigest()
     else:
         salt = str(randint(1, 100000))
         hash = sha256(salt.encode('utf-8') + password.encode('utf-8')).hexdigest()
-        vault.set(password, salt)
-        vault.set(password + salt, hash)
+        vault.lpush(password, salt)
+        vault.rpush(password, hash)
         return hash
 
 
