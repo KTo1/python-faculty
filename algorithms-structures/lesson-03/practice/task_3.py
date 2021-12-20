@@ -33,6 +33,8 @@ def count_u_substring(str):
 
 
 if __name__ == '__main__':
+    str = 'pap'
+    print(f'{str} - {count_u_substring(str)} уникальных подстрок')
     str = 'papa'
     print(f'{str} - {count_u_substring(str)} уникальных подстрок')
     str = 'asdasdasdgpogeoiumwoig'

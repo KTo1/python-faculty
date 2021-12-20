@@ -43,7 +43,6 @@ from random import randint
 def take_time(func):
     def wrapper(n):
         start_val = time()
-        # print(f'Замер времени для функции {func.__name__}, количество элементов {n}')
         print(f'Замер времени для функции {func.__name__}')
         obj = func(n)
         print(f'Время выполнения: {time() - start_val}')
