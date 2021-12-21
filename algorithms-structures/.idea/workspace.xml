@@ -25,7 +25,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.task_3">
+  <component name="RunManager" selected="Python.task_1">
     <configuration name="task_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="algorithms-structures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,9 +133,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task_1" />
         <item itemvalue="Python.task_3" />
         <item itemvalue="Python.task_4" />
-        <item itemvalue="Python.task_1" />
         <item itemvalue="Python.task_2 (1)" />
         <item itemvalue="Python.task_2" />
       </list>
