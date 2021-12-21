@@ -40,7 +40,7 @@ b) выполните со списком и словарем операции: 
 без вычисления адресов через хэш-таблицы.
 Последовательное удаление из списка также быстрее, поскокльку нужно очистить последнюю ячейку, однако
 удаление произовального элемента из списка намного больше, думаю потому, что нужно перраспределять памямть под
-оставшуюся часть списка.
+оставшуюся часть списка, видимо поэтому сложность алгоритма O(n).
 """
 
 from time import time
@@ -94,7 +94,7 @@ def edit_element_from_dict(dct):  # O(n)
 
 @take_time
 def del_element_random_from_list(lst):  # O(n^2)
-    lst_idx = [i for i in range(int(len(lst) / 2), len(lst))]
+    lst_idx = [i for i in range(1, int(len(lst) / 2))]
     shuffle(lst_idx)
     for i in lst_idx:
         del lst[i]
@@ -121,7 +121,7 @@ def del_element_from_dict(dct):  # O(n)
 
 
 if __name__ == '__main__':
-    n = 5
+    n = 1000000
 
     print('Задание а)')
     lst = load_list(n)
@@ -136,7 +136,7 @@ if __name__ == '__main__':
     edit_element_from_dict(dct)
 
     del_element_random_from_list(lst)
-    del_element_random_from_list(dct)
+    del_element_random_from_dict(dct)
 
     del_element_from_list(lst)
     del_element_from_dict(dct)
