@@ -13,10 +13,14 @@
 """
 
 """
+ВЫВОДЫ:
+чтобы найти все индексы с нечетными значениями, в любом случае нужно обойти весь список, поэтому я вижу 
+оптимизацию только в алгорите вычисления четности 
 
 """
 
 from timeit import timeit
+from random import randint
 
 
 def func_1(nums):
@@ -31,15 +35,15 @@ def func_2(nums):
     return [i for i in range(len(nums)) if nums[i] % 2 == 0]
 
 
-def func_3(nums):
-    pass
-    # return [i for i in range(0, len(nums), 2)]
-
-
 if __name__ == '__main__':
-    nums = list(range(10000))
+    nums = [randint(0, 10000) for i in range(10000)]
+
     print(timeit('func_1(nums)', number=1000, globals=globals()))
     print(timeit('func_2(nums)', number=1000, globals=globals()))
-    print(timeit('func_3(nums)', number=1000, globals=globals()))
 
-    print(func_1(nums) == func_2(nums) == func_3(nums))
+    print(func_1(nums) == func_2(nums))
+    # print(nums)
+    # print(func_1(nums))
+    # print(func_2(nums))
+    # print(func_3(nums))
+
