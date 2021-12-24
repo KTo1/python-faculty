@@ -10,10 +10,18 @@
 Сделайте замеры и опишите, получилось ли у вас ускорить задачу.
 """
 
+"""
+ВЫВОДЫ:
+оба предлагаемых решения имеют сложность О(n^2) и даже просто переписав на линейную сложность мы получаем 
+выигрыш в производительности.
+ 
+"""
+
 from timeit import timeit
 
 
 array = [1, 3, 1, 3, 4, 5, 1]
+# array = [1, 3, 1, 3, 4, 5, 1, 1, 3, 1, 3, 4, 5, 1, 1, 3, 1, 3, 4, 5, 1]
 
 
 def func_1():
@@ -41,16 +49,41 @@ def func_2():
 
 
 def func_3():
-
+    m, num = 0, 0
     dct = {}
     for i in array:
         dct.setdefault(i, 0)
         dct[i] += 1
-    dct = next(iter(sorted(dct.items(), reverse=True, key=lambda profit: profit[1])))
-    return f'Чаще всего встречается число {dct[0]}, ' \
-           f'оно появилось в массиве {dct[1]} раз(а)'
+
+    for k, v in dct.items():
+        if v > m:
+            m, num = v, k
+
+    return f'Чаще всего встречается число {num}, ' \
+           f'оно появилось в массиве {m} раз(а)'
 
 
-print(timeit('func_1()', number=1000000, globals=globals()))
-print(timeit('func_2()', number=1000000, globals=globals()))
-print(timeit('func_3()', number=1000000, globals=globals()))
+def func_4():
+    m, num = 0, 0
+    dct = {}
+    for i in array:
+        dct.setdefault(i, 0)
+        dct[i] += 1
+
+    for k, v in dct.items():
+        if v > m:
+            m, num = v, k
+
+    return f'Чаще всего встречается число {num}, ' \
+           f'оно появилось в массиве {m} раз(а)'
+
+
+if __name__ == '__main__':
+    print(timeit('func_1()', number=100000, globals=globals()))
+    print(timeit('func_2()', number=100000, globals=globals()))
+    print(timeit('func_3()', number=100000, globals=globals()))
+    print(timeit('func_4()', number=100000, globals=globals()))
+
+    print(func_1())
+    print(func_2())
+    print(func_3())

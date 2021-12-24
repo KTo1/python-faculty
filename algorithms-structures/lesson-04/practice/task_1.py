@@ -15,8 +15,10 @@
 """
 ВЫВОДЫ:
 чтобы найти все индексы с нечетными значениями, в любом случае нужно обойти весь список, поэтому я вижу 
-оптимизацию только в алгорите вычисления четности 
-
+оптимизацию тут или в алгорите вычисления четности или в обходе. 
+Из всего что мне пришло в голову быстрее всего оказались lc. Пока быстрее решения мне найти не удалось.
+По материалам из интернета я делаю вывод, что lc быстрее цикла for потому, что lc тратит меньше времени на 
+добавление, поскольку не вызывает метод append. 
 """
 
 from timeit import timeit
@@ -38,12 +40,8 @@ def func_2(nums):
 if __name__ == '__main__':
     nums = [randint(0, 10000) for i in range(10000)]
 
-    print(timeit('func_1(nums)', number=1000, globals=globals()))
-    print(timeit('func_2(nums)', number=1000, globals=globals()))
+    print('Вариант 1:', timeit('func_1(nums)', number=1000, globals=globals()))
+    print('Вариант 2:', timeit('func_2(nums)', number=1000, globals=globals()))
 
-    print(func_1(nums) == func_2(nums))
-    # print(nums)
-    # print(func_1(nums))
-    # print(func_2(nums))
-    # print(func_3(nums))
+    print(f'Результат:{" " if func_1(nums) == func_2(nums) else "не "}корректен')
 
