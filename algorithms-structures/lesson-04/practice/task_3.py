@@ -63,9 +63,6 @@ def revers_4(enter_num, revers_num=''):
 
 if __name__ == '__main__':
 
-    print(revers_2(1234560))
-    print(revers_4(1234560))
-
     num_100 = randint(10000, 1000000)
     num_1000 = randint(1000000, 10000000)
     num_10000 = randint(100000000, 10000000000000)

@@ -1,34 +1,17 @@
-from timeit import timeit
-from random import randint
+a, b = int(input()), int(input())
+result = [i for i in range(a, b + 1)]
+for i in range(a, int(b ** 0.5) + 1):
+    if i == 1:
+        result[i - 1] = False
+        continue
 
-def recursive_reverse(number):
-    if number == 0:
-        return str(number % 10)
-    return f'{str(number % 10)}{recursive_reverse(number // 10)}'
+    for j in range(i, len(result)):
+        if result[j]:
+            if result[j] % i == 0:
+                result[j] = False
+for i in result:
+    if i:
+        print(i)
+1
+100
 
-
-def memoize(f):
-    cache = {}
-
-    def decorate(*args):
-
-        if args in cache:
-            return cache[args]
-        else:
-            cache[args] = f(*args)
-            return cache[args]
-    return decorate
-
-
-@memoize
-def recursive_reverse_mem(number):
-    print(number)
-    if number == 0:
-        return str(number % 10)
-    return f'{str(number % 10)}{recursive_reverse_mem(number // 10)}'
-
-num_10 = randint(10000, 100000)
-
-
-print('------------------------')
-print(num_10)

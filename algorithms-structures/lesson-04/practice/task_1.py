@@ -51,5 +51,5 @@ if __name__ == '__main__':
     print('Вариант 2:', timeit('func_2(nums)', number=1000, globals=globals()))
     print('Вариант 3:', timeit('func_3(nums)', number=1000, globals=globals()))
 
-    print(f'Результат:{" " if func_1(nums) == func_2(nums) == list(func_3(nums)) else "не "}корректен')
+    print(f'Результат {" " if func_1(nums) == func_2(nums) == list(func_3(nums)) else "не "}корректен')
 
