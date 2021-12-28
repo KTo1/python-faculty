@@ -31,8 +31,8 @@ def move_to_end(dct, key):
 def add_result_row(operation, code_dict, code_odict, result_table):
     print(f'{operation}.....')
 
-    d_time = timeit(code_dict, number=number, globals=globals())
-    od_time = timeit(code_odict, number=number, globals=globals())
+    d_time = round(timeit(code_dict, number=number, globals=globals()), 6)
+    od_time = round(timeit(code_odict, number=number, globals=globals()), 6)
 
     percent = round(100 * (d_time - od_time) / d_time if d_time > od_time else 100 * (od_time - d_time) / od_time)
     result = f'Быстрее {"dict" if d_time < od_time else "odict"}'

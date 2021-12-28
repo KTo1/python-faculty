@@ -63,7 +63,7 @@ print(f'Средняя годовая прибыль всех предприят
 company_good, company_bad= [], []
 
 for company, data in company_data.items():
-    if data.profit_sum > avg_company_profit:
+    if data.profit_sum >= avg_company_profit:
         company_good.append(company)
     else:
         company_bad.append(company)

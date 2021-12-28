@@ -30,7 +30,9 @@ appendleft, popleft, extendleft дека и соответствующих им 
 ВЫВОДЫ:
 тестировалось на версии пайтон 3.10
 В первом и втором пункте дек оказался быстрее в каждом тесте, подробности в таблице. 
-В третьем медленее, полагаю из-за более сложной организации дека. 
+В третьем медленее, полагаю из-за более сложной организации дека.
+ 
+Получается документация верна.
 """
 
 from collections import deque
@@ -38,11 +40,12 @@ from timeit import timeit
 from prettytable import PrettyTable
 from random import randint
 
+
 def add_result_row(operation, code_list, code_dq, result_table):
     print(f'{operation}.....')
 
-    l_time = timeit(code_list, number=number, globals=globals())
-    d_time = timeit(code_dq, number=number, globals=globals())
+    l_time = round(timeit(code_list, number=number, globals=globals()), 6)
+    d_time = round(timeit(code_dq, number=number, globals=globals()), 6)
 
     percent = round(100 * (l_time - d_time) / l_time if l_time > d_time else 100 * (d_time - l_time) / d_time)
     result = f'Быстрее {"список" if l_time < d_time else "дек"}'
@@ -50,9 +53,6 @@ def add_result_row(operation, code_list, code_dq, result_table):
     result_table.add_row([f'{operation}', l_time, d_time, length, number, result, percent])
     # result_table.add_row(['', '', '', '', '', '', ''])
 
-
-length = 1000
-number = 1000
 
 lst = list()
 dq = deque()
@@ -68,6 +68,8 @@ print('Вычисление.....')
 
 result_table.add_row(['Пункт 1)', '-', '-', '-', '-', '-', '-'])
 
+length = 1000
+number = 1000
 add_result_row('append',
                '''for i in range(length):
                       lst.append(i)
