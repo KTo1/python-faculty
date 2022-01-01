@@ -33,128 +33,45 @@
 
 """
 Через NumPy
+Результат немного подозрителен) что-то уж совсем мало памяти, но тем не менее теорию подтверждает.
 
-    92     25.7 MiB      6.2 MiB      160000           stack.push(j)
-    
+До:    31.6 MiB      0.5 MiB       10003       array = [randint(0, 100000) for i in range(10000)]
+После: 31.6 MiB      0.0 MiB       10003       array_np = np.array([randint(0, 100000) for i in range(10000)])
 """
 
 from memory_profiler import profile
-from numpy import array, append, array_equal
+from random import randint
+import numpy as np
 
 
-class StackNp:
+# array = [1, 3, 1, 3, 4, 5, 1]
 
-    def __init__(self, capacity):
-        self._capacity = capacity
-        self._elems = array([])
-        self._add_stack()
-
-    def push(self, element):
-        if self.is_empty():
-            self._add_stack()
-        if len(self._current_stack) >= self._capacity:
-            self._add_stack()
-        self._current_stack = append(self._current_stack, element)
-
-    def pop(self):
-        if self.is_empty():
-            print('Stack is empty')
-            return None
-
-        elem = self._current_stack.pop()
-        if len(self._current_stack) <= 0:
-            self._del_stack()
-        return elem
-
-    def is_empty(self):
-        return array_equal(self._elems, array([]))
-
-    def _set_current_stack(self):
-        if not self.is_empty():
-            self._current_stack = self._elems[len(self._elems) - 1]
-        else:
-            self._current_stack = None
-
-    def _add_stack(self):
-        self._elems = append(self._elems, array([]))
-        self._set_current_stack()
-
-    def _del_stack(self):
-        if not self.is_empty():
-            del self._elems[len(self._elems) - 1]
-        self._set_current_stack()
-
-    def __str__(self):
-        return 'In stack:\n' + '\n'.join(map(str, self._elems))
+@profile
+def func_1():
+    array = [randint(0, 100000) for i in range(10000)]
+    m = 0
+    num = 0
+    for i in array:
+        count = array.count(i)
+        if count > m:
+            m = count
+            num = i
+    return f'Чаще всего встречается число {num}, ' \
+           f'оно появилось в массиве {m} раз(а)'
 
 
-class Stack:
+@profile
+def func_2():
+    array_np = np.array([randint(0, 100000) for i in range(10000)])
+    u, c = np.unique(array_np, return_counts=True)
+    m_idx = c.argmax()
+    num = u[m_idx]
+    m = c[m_idx]
 
-    def __init__(self, capacity):
-        self._capacity = capacity
-        self._elems = []
-        self._add_stack()
-
-    def push(self, element):
-        if self.is_empty():
-            self._add_stack()
-        if len(self._current_stack) >= self._capacity:
-            self._add_stack()
-        self._current_stack.append(element)
-
-    def pop(self):
-        if self.is_empty():
-            print('Stack is empty')
-            return None
-
-        elem = self._current_stack.pop()
-        if len(self._current_stack) <= 0:
-            self._del_stack()
-        return elem
-
-    def is_empty(self):
-        return self._elems == []
-
-    def _set_current_stack(self):
-        if not self.is_empty():
-            self._current_stack = self._elems[len(self._elems) - 1]
-        else:
-            self._current_stack = None
-
-    def _add_stack(self):
-        self._elems.append([])
-        self._set_current_stack()
-
-    def _del_stack(self):
-        if not self.is_empty():
-            del self._elems[len(self._elems) - 1]
-        self._set_current_stack()
-
-    def __str__(self):
-        return 'In stack:\n' + '\n'.join(map(str, self._elems))
-
-
-# @profile
-def stack_ops():
-    # stack = Stack(100)
-    #
-    # for j in range(160000):
-    #     stack.push(j)
-    #
-    # stack.pop()
-    # stack.pop()
-
-    # ar = array([])
-    # ar = append(ar, [1])
-    # ar = append(ar, [2])
-    # ar = append(ar, [3])
-    # print(ar)
-    stack_np = StackNp(6)
-    for j in range(16):
-        stack_np.push(j)
-
-    print(stack_np)
+    return f'Чаще всего встречается число {num}, ' \
+           f'оно появилось в массиве {m} раз(а)'
 
 
 if __name__ == "__main__":
-    stack_ops()
+    print(func_1())
+    print(func_2())
