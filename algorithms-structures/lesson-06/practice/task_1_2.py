@@ -30,3 +30,38 @@
 
 Это файл для второго скрипта
 """
+
+"""
+Собственно задача в этом и заключалась: оптимизировать по памяти. 
+В первом варианте lc, во втором генератор
+
+1, make_list:      46     61.1 MiB      0.0 MiB           1       print(result)
+2, make_generator: 53     57.3 MiB      0.0 MiB           1       print(result)
+
+в случае с генератором приращение настолько мало, что считается нулем.     
+"""
+
+from random import randint
+from memory_profiler import profile
+
+# result = [12, 44, 4, 10, 78, 123]
+# src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+src = [randint(0, 100000) for i in range(1000000)]
+
+@profile
+def make_list():
+    # Cписком
+    result = [elem for idx, elem in enumerate(src) if elem > src[idx-1] and idx > 0]
+    print(result)
+
+
+@profile
+def make_generator():
+    # Оптимизация по памяти, генератором
+    result = (elem for idx, elem in enumerate(src) if elem > src[idx-1] and idx > 0)
+    print(result)
+
+
+if __name__ == "__main__":
+    make_list()
+    make_generator()
