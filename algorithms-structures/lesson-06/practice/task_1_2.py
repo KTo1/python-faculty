@@ -52,6 +52,7 @@ from memory_profiler import profile
 # src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
 src = [randint(0, 100000) for i in range(1000000)]
 
+
 @profile
 def make_list():
     # Cписком
