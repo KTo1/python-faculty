@@ -56,7 +56,7 @@ def buble_sort_mod(array):
 
 
 if __name__ == '__main__':
-    original_array = [randint(-100, 99) for i in range(100)]
+    original_array = [randint(-100, 99) for i in range(1000)]
 
     print('Сортировка пузырьком:')
     sorted_array = buble_sort(original_array.copy())
