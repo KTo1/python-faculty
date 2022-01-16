@@ -22,9 +22,24 @@ from collections import Counter, deque
 from task_2 import BinaryTree
 
 
+def haffman_tree(seq):
+    if False:
+        return
+    else:
+        el1 = seq.popleft()
+        el2 = seq.popleft()
+        weight = el1.value + el2.value
+        new_el = BinaryTree('', value=weight)
+        for i in range(len(seq)):
+            if seq[i][1] > weight:
+                seq.insert(i, new_el)
+
+
 if __name__ == '__main__':
     s = deque(sorted(dict(Counter('beep boop beer!')).items(), key=lambda i: i[1]))
     for i in range(len(s)):
-        s[i] = (BinaryTree(s[i][0]), s[i][1])
+        s[i] = (BinaryTree(s[i][0], value=s[i][1]), s[i][1])
 
     print(s)
+
+    haffman_tree(s)
