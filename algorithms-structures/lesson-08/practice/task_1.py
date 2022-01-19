@@ -22,31 +22,10 @@ from collections import Counter, deque
 
 
 class BinaryTree:
-    def __init__(self, root_obj, value=0):
-        self.root = root_obj
-        self.left_child = None
-        self.right_child = None
+    def __init__(self, left=None, right=None, value=0):
+        self.left = left
+        self.right = right
         self.value = value
-
-    def set_left(self, new_node):
-        self.left_child = new_node
-        return self.left_child
-
-    def set_right(self, new_node):
-        self.right_child = new_node
-        return self.right_child
-
-    def get_right_child(self):
-        return self.right_child
-
-    def get_left_child(self):
-        return self.left_child
-
-    def set_root_val(self, obj):
-        self.root = obj
-
-    def get_root_val(self):
-        return self.root
 
 
 class HaffmanTree:
@@ -59,12 +38,19 @@ class HaffmanTree:
 
         # собираем коды
 
-
     def build(self, string):
         return self._haffman_tree(self._initial(string))
 
-    def _walk(self, tree):
-        pass
+    def _walk(self, node):
+        if isinstance(node, str):
+            print(node)
+            return
+        if node.left is not None:
+            print(0)
+            self._walk(node.left)
+        if node.right is not None:
+            print(1)
+            self._walk(node.right)
 
     def _initial(self, string):
         sequence = deque(sorted(dict(Counter(string)).items(), key=lambda i: i[1]))
@@ -79,9 +65,7 @@ class HaffmanTree:
 
         el1, el2 = seq.popleft(), seq.popleft()
         weight = el1[1] + el2[1]
-        new_el = BinaryTree('', value=weight)
-        new_el.set_left(el1[0])
-        new_el.set_right(el2[0])
+        new_el = BinaryTree(left=el1[0], right=el2[0], value=weight)
         if len(seq) <= 0:
             seq.insert(0, new_el)
             return seq[0]
@@ -98,5 +82,7 @@ class HaffmanTree:
 
 if __name__ == '__main__':
     s = 'beep boop beer!'
-    tree = HaffmanTree().build(s)
+    ht = HaffmanTree()
+    tree = ht.build(s)
+    ht._walk(tree)
     print(tree)
