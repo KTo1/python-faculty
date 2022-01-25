@@ -199,3 +199,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+algorithms-structures/.idea/
