@@ -1,0 +1,163 @@
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    0.0.0.0:135            WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:445            WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:2179           WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:5040           WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:5357           WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:27036          WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:49664          WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:49665          WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:49666          WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:49667          WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:49670          WIN-MAIN:0             LISTENING
+  TCP    0.0.0.0:49671          WIN-MAIN:0             LISTENING
+  TCP    127.0.0.1:27060        WIN-MAIN:0             LISTENING
+  TCP    172.25.96.1:139        WIN-MAIN:0             LISTENING
+  TCP    192.168.25.102:139     WIN-MAIN:0             LISTENING
+  TCP    192.168.25.102:51241   mail:https             ESTABLISHED
+  TCP    192.168.25.102:52268   yandex:https           ESTABLISHED
+  TCP    192.168.25.102:52300   yabs:https             ESTABLISHED
+  TCP    192.168.25.102:52305   lq-in-f188:5228        ESTABLISHED
+  TCP    192.168.25.102:55366   192.168.25.108:ssh     ESTABLISHED
+  TCP    192.168.25.102:56718   WIN-01:microsoft-ds    ESTABLISHED
+  TCP    192.168.25.102:58318   xiva-daria:https       ESTABLISHED
+  TCP    192.168.25.102:58383   ec2-35-174-179-159:https  ESTABLISHED
+  TCP    192.168.25.102:58392   lb-140-82-121-5-fra:https  ESTABLISHED
+  TCP    192.168.25.102:58402   cdn-185-199-108-133:https  ESTABLISHED
+  TCP    192.168.25.102:58408   mc:https               ESTABLISHED
+  TCP    192.168.25.102:58429   cdn-185-199-108-154:https  ESTABLISHED
+  TCP    192.168.25.102:58433   cdn-185-199-108-133:https  ESTABLISHED
+  TCP    192.168.25.102:58438   cdn-185-199-108-154:https  ESTABLISHED
+  TCP    192.168.25.102:58442   sovetnik:https         ESTABLISHED
+  TCP    192.168.25.102:58448   a96-16-49-50:https     ESTABLISHED
+  TCP    192.168.25.102:58450   a96-16-49-50:https     ESTABLISHED
+  TCP    192.168.25.102:58461   top-fwz1:https         ESTABLISHED
+  TCP    192.168.25.102:58465   lb-140-82-114-25-iad:https  ESTABLISHED
+  TCP    192.168.25.102:58480   server-13-32-43-70:https  ESTABLISHED
+  TCP    192.168.25.102:58490   151.101.2.137:https    ESTABLISHED
+  TCP    192.168.25.102:58494   geekbrains:https       ESTABLISHED
+  TCP    192.168.25.102:58496   geekbrains:https       ESTABLISHED
+  TCP    192.168.25.102:58498   lb-140-82-121-3-fra:https  ESTABLISHED
+  TCP    192.168.25.102:58503   lq-in-f194:https       ESTABLISHED
+  TCP    192.168.25.102:58504   lq-in-f194:https       TIME_WAIT
+  TCP    192.168.25.102:58505   199:https              ESTABLISHED
+  TCP    192.168.25.102:58509   lq-in-f113:https       ESTABLISHED
+  TCP    192.168.25.102:58510   li-in-f138:https       ESTABLISHED
+  TCP    192.168.25.102:58511   lo-in-f95:https        ESTABLISHED
+  TCP    192.168.25.102:58512   lh-in-f95:https        ESTABLISHED
+  TCP    192.168.25.102:58514   lh-in-f113:https       ESTABLISHED
+  TCP    192.168.25.102:58515   lu-in-f95:https        ESTABLISHED
+  TCP    192.168.25.102:58516   lu-in-f196:https       ESTABLISHED
+  TCP    192.168.25.102:58535   52.109.88.177:https    TIME_WAIT
+  TCP    192.168.25.102:58551   ec2-54-81-126-173:https  CLOSE_WAIT
+  TCP    192.168.25.102:58552   52.109.88.39:https     TIME_WAIT
+  TCP    192.168.25.102:58553   52.109.88.34:https     TIME_WAIT
+  TCP    192.168.25.102:58554   178.248.232.209:https  ESTABLISHED
+  TCP    192.168.25.102:58555   static:https           ESTABLISHED
+  TCP    192.168.25.102:58556   static:https           ESTABLISHED
+  TCP    192.168.25.102:58557   avatars:https          ESTABLISHED
+  TCP    192.168.25.102:58559   mail-yandex-ru-production-external:https  ESTABLISHED
+  TCP    192.168.25.102:58560   csp:https              ESTABLISHED
+  TCP    192.168.25.102:58562   vip02:https            ESTABLISHED
+  TCP    192.168.25.102:58566   vip01:https            CLOSE_WAIT
+  TCP    192.168.25.102:58567   13.107.246.49:https    ESTABLISHED
+  TCP    192.168.25.102:58568   13.107.246.49:https    ESTABLISHED
+  TCP    192.168.25.102:58570   n29-03-09-vip:https    ESTABLISHED
+  TCP    192.168.25.102:58571   egress:https           ESTABLISHED
+  TCP    192.168.25.102:58572   20.42.65.84:https      TIME_WAIT
+  TCP    192.168.25.102:58573   20.42.65.84:https      TIME_WAIT
+  TCP    192.168.25.102:58574   20.42.65.84:https      TIME_WAIT
+  TCP    192.168.25.102:58576   52.231.207.240:https   ESTABLISHED
+  TCP    192.168.25.102:58577   52.231.207.240:https   ESTABLISHED
+  TCP    192.168.25.102:58578   20.42.65.84:https      ESTABLISHED
+  TCP    192.168.25.102:58579   a-0001:https           ESTABLISHED
+  TCP    192.168.25.102:58580   51.11.168.232:https    TIME_WAIT
+  TCP    192.168.25.102:58581   20.42.65.84:https      TIME_WAIT
+  TCP    192.168.25.102:58582   20.42.65.84:https      TIME_WAIT
+  TCP    192.168.25.102:58583   20.42.65.84:https      TIME_WAIT
+  TCP    192.168.25.102:59409   20.54.37.64:https      ESTABLISHED
+  TCP    192.168.25.102:60376   customer:8886          ESTABLISHED
+  TCP    192.168.25.102:65358   a184-31-15-193:https   CLOSE_WAIT
+  TCP    192.168.25.102:65359   a184-31-15-193:https   CLOSE_WAIT
+  TCP    192.168.25.102:65360   a184-31-15-193:https   CLOSE_WAIT
+  TCP    192.168.25.102:65361   a184-31-15-193:https   CLOSE_WAIT
+  TCP    192.168.25.102:65365   server-143-204-55-96:https  CLOSE_WAIT
+  TCP    192.168.25.102:65366   188x234x73x49:https    CLOSE_WAIT
+  TCP    192.168.25.102:65368   188x234x73x49:https    CLOSE_WAIT
+  TCP    192.168.25.102:65370   188x234x73x49:https    CLOSE_WAIT
+  TCP    192.168.25.102:65373   188x234x73x49:https    CLOSE_WAIT
+  TCP    192.168.25.102:65377   a104-75-48-200:https   CLOSE_WAIT
+  TCP    [::]:135               WIN-MAIN:0             LISTENING
+  TCP    [::]:445               WIN-MAIN:0             LISTENING
+  TCP    [::]:2179              WIN-MAIN:0             LISTENING
+  TCP    [::]:5357              WIN-MAIN:0             LISTENING
+  TCP    [::]:49664             WIN-MAIN:0             LISTENING
+  TCP    [::]:49665             WIN-MAIN:0             LISTENING
+  TCP    [::]:49666             WIN-MAIN:0             LISTENING
+  TCP    [::]:49667             WIN-MAIN:0             LISTENING
+  TCP    [::]:49670             WIN-MAIN:0             LISTENING
+  TCP    [::]:49671             WIN-MAIN:0             LISTENING
+  TCP    [fe80::7cf1:4735:bda7:340c%31]:2179  WIN-MAIN:56137         ESTABLISHED
+  TCP    [fe80::7cf1:4735:bda7:340c%31]:56137  WIN-MAIN:2179          ESTABLISHED
+  UDP    0.0.0.0:53             *:*                    
+  UDP    0.0.0.0:500            *:*                    
+  UDP    0.0.0.0:3702           *:*                    
+  UDP    0.0.0.0:3702           *:*                    
+  UDP    0.0.0.0:3702           *:*                    
+  UDP    0.0.0.0:3702           *:*                    
+  UDP    0.0.0.0:3702           *:*                    
+  UDP    0.0.0.0:3702           *:*                    
+  UDP    0.0.0.0:4500           *:*                    
+  UDP    0.0.0.0:5050           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5353           *:*                    
+  UDP    0.0.0.0:5355           *:*                    
+  UDP    0.0.0.0:27036          *:*                    
+  UDP    0.0.0.0:53140          *:*                    
+  UDP    0.0.0.0:56773          *:*                    
+  UDP    0.0.0.0:58509          *:*                    
+  UDP    0.0.0.0:58846          *:*                    
+  UDP    0.0.0.0:58847          *:*                    
+  UDP    0.0.0.0:59760          *:*                    
+  UDP    0.0.0.0:59921          *:*                    
+  UDP    0.0.0.0:63832          *:*                    
+  UDP    127.0.0.1:1900         *:*                    
+  UDP    127.0.0.1:49589        *:*                    
+  UDP    127.0.0.1:59762        *:*                    
+  UDP    172.25.96.1:67         *:*                    
+  UDP    172.25.96.1:68         *:*                    
+  UDP    172.25.96.1:137        *:*                    
+  UDP    172.25.96.1:138        *:*                    
+  UDP    172.25.96.1:1900       *:*                    
+  UDP    172.25.96.1:49590      *:*                    
+  UDP    192.168.25.102:137     *:*                    
+  UDP    192.168.25.102:138     *:*                    
+  UDP    192.168.25.102:1900    *:*                    
+  UDP    192.168.25.102:49588   *:*                    
+  UDP    [::]:500               *:*                    
+  UDP    [::]:3702              *:*                    
+  UDP    [::]:3702              *:*                    
+  UDP    [::]:3702              *:*                    
+  UDP    [::]:3702              *:*                    
+  UDP    [::]:3702              *:*                    
+  UDP    [::]:3702              *:*                    
+  UDP    [::]:4500              *:*                    
+  UDP    [::]:5353              *:*                    
+  UDP    [::]:5353              *:*                    
+  UDP    [::]:5353              *:*                    
+  UDP    [::]:53141             *:*                    
+  UDP    [::]:56774             *:*                    
+  UDP    [::]:58848             *:*                    
+  UDP    [::]:59761             *:*                    
+  UDP    [::1]:1900             *:*                    
+  UDP    [::1]:49586            *:*                    
+  UDP    [fe80::7cf1:4735:bda7:340c%31]:1900  *:*                    
+  UDP    [fe80::7cf1:4735:bda7:340c%31]:49587  *:*                    

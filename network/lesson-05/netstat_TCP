@@ -1,0 +1,283 @@
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State           PID
+  TCP    0.0.0.0:135            WIN-MAIN:0             LISTENING       1200
+  RpcSs
+ [svchost.exe]
+  TCP    0.0.0.0:445            WIN-MAIN:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    0.0.0.0:2179           WIN-MAIN:0             LISTENING       1708
+ [vmms.exe]
+  TCP    0.0.0.0:5040           WIN-MAIN:0             LISTENING       6288
+  CDPSvc
+ [svchost.exe]
+  TCP    0.0.0.0:5357           WIN-MAIN:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    0.0.0.0:27036          WIN-MAIN:0             LISTENING       12676
+ [steam.exe]
+  TCP    0.0.0.0:49664          WIN-MAIN:0             LISTENING       764
+ [lsass.exe]
+  TCP    0.0.0.0:49665          WIN-MAIN:0             LISTENING       932
+ Can not obtain ownership information
+  TCP    0.0.0.0:49666          WIN-MAIN:0             LISTENING       1732
+  EventLog
+ [svchost.exe]
+  TCP    0.0.0.0:49667          WIN-MAIN:0             LISTENING       1612
+  Schedule
+ [svchost.exe]
+  TCP    0.0.0.0:49670          WIN-MAIN:0             LISTENING       3572
+ [spoolsv.exe]
+  TCP    0.0.0.0:49671          WIN-MAIN:0             LISTENING       1020
+ Can not obtain ownership information
+  TCP    127.0.0.1:27060        WIN-MAIN:0             LISTENING       12676
+ [steam.exe]
+  TCP    172.25.96.1:139        WIN-MAIN:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    192.168.25.102:139     WIN-MAIN:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    192.168.25.102:52268   yandex:https           ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:52300   yabs:https             ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:52305   lq-in-f188:5228        ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:55366   192.168.25.108:ssh     ESTABLISHED     8896
+ [putty.exe]
+  TCP    192.168.25.102:56718   WIN-01:microsoft-ds    ESTABLISHED     4
+ Can not obtain ownership information
+  TCP    192.168.25.102:58383   ec2-35-174-179-159:https  ESTABLISHED     3452
+ [gitkraken.exe]
+  TCP    192.168.25.102:58392   lb-140-82-121-5-fra:https  ESTABLISHED     2592
+ [gitkraken.exe]
+  TCP    192.168.25.102:58590   Serverv:ms-wbt-server  ESTABLISHED     16440
+ [mstsc.exe]
+  TCP    192.168.25.102:58591   lb-140-82-121-4-fra:https  ESTABLISHED     3256
+ [gitkraken.exe]
+  TCP    192.168.25.102:58855   geekbrains:https       ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:58864   geekbrains:https       ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:59409   20.54.37.64:https      ESTABLISHED     4040
+  WpnService
+ [svchost.exe]
+  TCP    192.168.25.102:59422   xiva-daria:https       ESTABLISHED     10228
+ [YandexDisk2.exe]
+  TCP    192.168.25.102:59467   mail:https             ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:59983   178.248.232.209:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60050   13.69.239.72:https     ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60056   13.69.239.72:https     TIME_WAIT       0
+  TCP    192.168.25.102:60057   a-0001:https           ESTABLISHED     3828
+ [SearchApp.exe]
+  TCP    192.168.25.102:60058   a-0001:https           ESTABLISHED     3828
+ [SearchApp.exe]
+  TCP    192.168.25.102:60060   204.79.197.254:https   ESTABLISHED     3828
+ [SearchApp.exe]
+  TCP    192.168.25.102:60061   13.107.246.254:https   ESTABLISHED     3828
+ [SearchApp.exe]
+  TCP    192.168.25.102:60062   52.244.33.223:https    ESTABLISHED     3828
+ [SearchApp.exe]
+  TCP    192.168.25.102:60063   93.184.220.29:http     ESTABLISHED     3828
+ [SearchApp.exe]
+  TCP    192.168.25.102:60064   204.79.197.222:https   ESTABLISHED     3828
+ [SearchApp.exe]
+  TCP    192.168.25.102:60065   20.42.73.25:https      TIME_WAIT       0
+  TCP    192.168.25.102:60066   20.42.73.25:https      TIME_WAIT       0
+  TCP    192.168.25.102:60067   20.42.73.25:https      TIME_WAIT       0
+  TCP    192.168.25.102:60068   20.42.73.25:https      TIME_WAIT       0
+  TCP    192.168.25.102:60376   customer:8886          ESTABLISHED     8624
+ [infatica-service-app.exe]
+  TCP    192.168.25.102:65358   a184-31-15-193:https   CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65359   a184-31-15-193:https   CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65360   a184-31-15-193:https   CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65361   a184-31-15-193:https   CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65365   server-143-204-55-96:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65366   188x234x73x49:https    CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65368   188x234x73x49:https    CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65370   188x234x73x49:https    CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65373   188x234x73x49:https    CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65377   a104-75-48-200:https   CLOSE_WAIT      9360
+ [SearchApp.exe]
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State           PID
+  TCP    0.0.0.0:135            WIN-MAIN:0             LISTENING       1200
+  RpcSs
+ [svchost.exe]
+  TCP    0.0.0.0:445            WIN-MAIN:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    0.0.0.0:2179           WIN-MAIN:0             LISTENING       1708
+ [vmms.exe]
+  TCP    0.0.0.0:5040           WIN-MAIN:0             LISTENING       6288
+  CDPSvc
+ [svchost.exe]
+  TCP    0.0.0.0:5357           WIN-MAIN:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    0.0.0.0:27036          WIN-MAIN:0             LISTENING       12676
+ [steam.exe]
+  TCP    0.0.0.0:49664          WIN-MAIN:0             LISTENING       764
+ [lsass.exe]
+  TCP    0.0.0.0:49665          WIN-MAIN:0             LISTENING       932
+ Can not obtain ownership information
+  TCP    0.0.0.0:49666          WIN-MAIN:0             LISTENING       1732
+  EventLog
+ [svchost.exe]
+  TCP    0.0.0.0:49667          WIN-MAIN:0             LISTENING       1612
+  Schedule
+ [svchost.exe]
+  TCP    0.0.0.0:49670          WIN-MAIN:0             LISTENING       3572
+ [spoolsv.exe]
+  TCP    0.0.0.0:49671          WIN-MAIN:0             LISTENING       1020
+ Can not obtain ownership information
+  TCP    127.0.0.1:27060        WIN-MAIN:0             LISTENING       12676
+ [steam.exe]
+  TCP    172.25.96.1:139        WIN-MAIN:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    192.168.25.102:139     WIN-MAIN:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    192.168.25.102:52268   yandex.ru:https        ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:52300   yabs.yandex.ru:https   ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:52305   lq-in-f188.1e100.net:5228  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:55366   192.168.25.108:ssh     ESTABLISHED     8896
+ [putty.exe]
+  TCP    192.168.25.102:56718   WIN-01:microsoft-ds    ESTABLISHED     4
+ Can not obtain ownership information
+  TCP    192.168.25.102:58383   ec2-35-174-179-159.compute-1.amazonaws.com:https  ESTABLISHED     3452
+ [gitkraken.exe]
+  TCP    192.168.25.102:58392   lb-140-82-121-5-fra.github.com:https  ESTABLISHED     2592
+ [gitkraken.exe]
+  TCP    192.168.25.102:58590   Serverv:ms-wbt-server  ESTABLISHED     16440
+ [mstsc.exe]
+  TCP    192.168.25.102:58591   lb-140-82-121-4-fra.github.com:https  ESTABLISHED     3256
+ [gitkraken.exe]
+  TCP    192.168.25.102:58855   geekbrains.ru:https    ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:58864   geekbrains.ru:https    ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:59409   20.54.37.64:https      ESTABLISHED     4040
+  WpnService
+ [svchost.exe]
+  TCP    192.168.25.102:59422   xiva-daria.stable.qloud-b.yandex.net:https  ESTABLISHED     10228
+ [YandexDisk2.exe]
+  TCP    192.168.25.102:59467   mail.stepik.org:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:59983   178.248.232.209:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60100   mc.yandex.ru:https     ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60101   mc.yandex.ru:https     ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60115   sovetnik.market.http.yandex.ru:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60127   95.213.158.107:https   ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60286   82.202.218.98:https    ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60319   lb-in-f84.1e100.net:https  TIME_WAIT       0
+  TCP    192.168.25.102:60328   li-in-f139.1e100.net:https  TIME_WAIT       0
+  TCP    192.168.25.102:60329   lg-in-f101.1e100.net:https  TIME_WAIT       0
+  TCP    192.168.25.102:60330   a104-73-93-226.deploy.static.akamaitechnologies.com:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60333   a104-103-65-157.deploy.static.akamaitechnologies.com:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60335   a104-103-65-157.deploy.static.akamaitechnologies.com:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60353   WIN-01:wsd             TIME_WAIT       0
+  TCP    192.168.25.102:60357   static.yandex.net:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60358   static.yandex.net:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60359   avatars.mds.yandex.net:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60360   favicon.yandex.net:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60361   mail-yandex-ru-production-external.stable.qloud-b.yandex.net:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60362   csp.yandex.net:https   ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60363   csp.yandex.net:https   ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60364   n29-03-09-vip.lb.opera.technology:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60365   m2.vader4.beget.com:http  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60366   m2.vader4.beget.com:http  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60367   m2.vader4.beget.com:http  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60368   m2.vader4.beget.com:http  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60369   m2.vader4.beget.com:http  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60370   vip01.am4.lb.opera.technology:https  CLOSE_WAIT      3672
+ [opera.exe]
+  TCP    192.168.25.102:60371   m2.vader4.beget.com:http  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60372   lu-in-f155.1e100.net:http  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60373   bs.yandex.ru:https     ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60374   n30-03-09-vip.lb.opera.technology:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60375   host216.rax.ru:https   CLOSE_WAIT      3672
+ [opera.exe]
+  TCP    192.168.25.102:60376   customer.clientshostname.com:8886  ESTABLISHED     8624
+ [infatica-service-app.exe]
+  TCP    192.168.25.102:60377   adfox-external-l3-engine.stable.qloud-b.yandex.net:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60378   154.47.36.185:https    ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60379   bs.yandex.ru:https     ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60380   storage.mds.yandex.net:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60381   bs.yandex.ru:https     ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60382   le-in-f100.1e100.net:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60383   31.172.81.158:https    ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60385   stockholm-10.cdn77.com:https  ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60386   31.172.81.158:https    ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60387   45.133.44.4:https      ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:60390   31.172.81.158:https    ESTABLISHED     3672
+ [opera.exe]
+  TCP    192.168.25.102:65358   a184-31-15-193.deploy.static.akamaitechnologies.com:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65359   a184-31-15-193.deploy.static.akamaitechnologies.com:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65360   a184-31-15-193.deploy.static.akamaitechnologies.com:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65361   a184-31-15-193.deploy.static.akamaitechnologies.com:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65365   server-143-204-55-96.osl50.r.cloudfront.net:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65366   188x234x73x49.dynamic.omsk.ertelecom.ru:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65368   188x234x73x49.dynamic.omsk.ertelecom.ru:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65370   188x234x73x49.dynamic.omsk.ertelecom.ru:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65373   188x234x73x49.dynamic.omsk.ertelecom.ru:https  CLOSE_WAIT      9360
+ [SearchApp.exe]
+  TCP    192.168.25.102:65377   a104-75-48-200.deploy.static.akamaitechnologies.com:https  CLOSE_WAIT      9360
+ [SearchApp.exe]

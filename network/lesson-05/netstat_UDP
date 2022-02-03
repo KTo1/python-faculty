@@ -1,0 +1,107 @@
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State           PID
+  UDP    0.0.0.0:53             *:*                                    3024
+  SharedAccess
+ [svchost.exe]
+  UDP    0.0.0.0:500            *:*                                    4008
+  IKEEXT
+ [svchost.exe]
+  UDP    0.0.0.0:3702           *:*                                    2564
+  FDResPub
+ [svchost.exe]
+  UDP    0.0.0.0:3702           *:*                                    2564
+  FDResPub
+ [svchost.exe]
+  UDP    0.0.0.0:3702           *:*                                    4488
+ [dashost.exe]
+  UDP    0.0.0.0:3702           *:*                                    4488
+ [dashost.exe]
+  UDP    0.0.0.0:3702           *:*                                    3432
+  fdPHost
+ [svchost.exe]
+  UDP    0.0.0.0:3702           *:*                                    3432
+  fdPHost
+ [svchost.exe]
+  UDP    0.0.0.0:4500           *:*                                    4008
+  IKEEXT
+ [svchost.exe]
+  UDP    0.0.0.0:5050           *:*                                    6288
+  CDPSvc
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                                    15808
+ [opera.exe]
+  UDP    0.0.0.0:5353           *:*                                    15808
+ [opera.exe]
+  UDP    0.0.0.0:5353           *:*                                    2512
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                                    15808
+ [opera.exe]
+  UDP    0.0.0.0:5353           *:*                                    3672
+ [opera.exe]
+  UDP    0.0.0.0:5353           *:*                                    3672
+ [opera.exe]
+  UDP    0.0.0.0:5353           *:*                                    3672
+ [opera.exe]
+  UDP    0.0.0.0:5355           *:*                                    2512
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:27036          *:*                                    12676
+ [steam.exe]
+  UDP    0.0.0.0:50527          *:*                                    3672
+ [opera.exe]
+  UDP    0.0.0.0:53140          *:*                                    3432
+  fdPHost
+ [svchost.exe]
+  UDP    0.0.0.0:53598          *:*                                    3672
+ [opera.exe]
+  UDP    0.0.0.0:56773          *:*                                    4488
+ [dashost.exe]
+  UDP    0.0.0.0:58846          *:*                                    3024
+  SharedAccess
+ [svchost.exe]
+  UDP    0.0.0.0:58847          *:*                                    3024
+  SharedAccess
+ [svchost.exe]
+  UDP    0.0.0.0:59760          *:*                                    2564
+  FDResPub
+ [svchost.exe]
+  UDP    0.0.0.0:63832          *:*                                    12676
+ [steam.exe]
+  UDP    127.0.0.1:1900         *:*                                    5000
+  SSDPSRV
+ [svchost.exe]
+  UDP    127.0.0.1:49589        *:*                                    5000
+  SSDPSRV
+ [svchost.exe]
+  UDP    127.0.0.1:59762        *:*                                    3388
+  iphlpsvc
+ [svchost.exe]
+  UDP    172.25.96.1:67         *:*                                    3024
+  SharedAccess
+ [svchost.exe]
+  UDP    172.25.96.1:68         *:*                                    3024
+  SharedAccess
+ [svchost.exe]
+  UDP    172.25.96.1:137        *:*                                    4
+ Can not obtain ownership information
+  UDP    172.25.96.1:138        *:*                                    4
+ Can not obtain ownership information
+  UDP    172.25.96.1:1900       *:*                                    5000
+  SSDPSRV
+ [svchost.exe]
+  UDP    172.25.96.1:49590      *:*                                    5000
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.25.102:137     *:*                                    4
+ Can not obtain ownership information
+  UDP    192.168.25.102:138     *:*                                    4
+ Can not obtain ownership information
+  UDP    192.168.25.102:1900    *:*                                    5000
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.25.102:49588   *:*                                    5000
+  SSDPSRV
+ [svchost.exe]
