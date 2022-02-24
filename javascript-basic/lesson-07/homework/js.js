@@ -295,31 +295,6 @@ const hud = {
     td_score.textContent = `Счет: ${data.score} кроликов из ${data.total} необходимых `;
     tr_score.appendChild(td_score);
 
-    // const tr_legend = document.createElement('tr');
-    // tr_legend.classList.add('row-hud');
-    // tr_legend.textContent = 'Легенда:';
-    // table_hud.appendChild(tr_legend);
-
-    // const td_head = document.createElement('td');
-    // td_head.classList.add('snakeHead');
-    // td_head.textContent = `Голова`;
-    // tr_legend.appendChild(td_head);
-
-    // const td_food = document.createElement('td');
-    // td_food.classList.add('food');
-    // td_food.textContent = `Еда`;
-    // tr_legend.appendChild(td_food);
-
-    // const td_wall = document.createElement('td');
-    // td_wall.classList.add('wall');
-    // td_wall.textContent = `Стена`;
-    // tr_legend.appendChild(td_wall);
-
-    // const tr_rules = document.createElement('tr');
-    // tr_rules.classList.add('row-hud');
-    // tr_rules.textContent = 'Правила: ешьте кроликов. Ни о чем не думайте.';
-    // table_hud.appendChild(tr_rules);
-
   },
 };
 
