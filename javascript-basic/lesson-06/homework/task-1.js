@@ -27,12 +27,12 @@ const Basket =
             return this.settings[settingName];
         },
 
-        add(id, name, img, count, price){
-            element = this.goods.find(el => (el[0] === id));
+        add(id, name, images, count, price){
+            element = this.goods.find(el => (el.id === id));
             if (element) {
                 element[3]++;
             } else {
-                this.goods.push([id, name, img, count, price]);      
+                this.goods.push({id:id, name:name, images:images, count:count, price:price});
             };
         },
 
@@ -41,11 +41,11 @@ const Basket =
         },
 
         countBasketPrice(){
-            return this.goods.reduce((total, item) => total + item[3] * item[4], 0);
+            return this.goods.reduce((total, item) => total + item.count * item.price, 0);
         },
 
         countBasket(){
-            return this.goods.reduce((total, item) => total + item[3], 0);
+            return this.goods.reduce((total, item) => total + item.count, 0);
         },
 
         draw(){
@@ -69,10 +69,10 @@ const Basket =
                 const tdPrice = document.createElement('td');
                 const tdTotal = document.createElement('td');
 
-                tdProduct.textContent = item[1] + ': ';
-                tdCount.textContent = item[3] + ': ';
-                tdPrice.textContent = item[4] + ' (руб.) : ';
-                tdTotal.textContent = item[3] * item[4] + ' (руб.) ';
+                tdProduct.textContent = item.name + ': ';
+                tdCount.textContent = item.count + ': ';
+                tdPrice.textContent = item.price + ' (руб.) : ';
+                tdTotal.textContent = item.count * item.price + ' (руб.) ';
 
                 tr.appendChild(tdProduct);
                 tr.appendChild(tdCount);
@@ -126,12 +126,12 @@ const Catalog =
             return this.getImagesPath() + '\\' + this.settings.imagePathBig;
         },
 
-        add(id, name, img, count, price){
-            this.goods.push([id, name, img, count, price]);      
+        add(id, name, images, count, price){
+            this.goods.push({id:id, name:name, images:images, count:count, price:price});
         },
 
         addToBasket(item){
-            this.basket.add(item[0], item[1], item[2], 1, item[4]);
+            this.basket.add(item.id, item.name, item.images, 1, item.price);
             this.basket.draw()
         }, 
         
@@ -169,7 +169,7 @@ const Catalog =
 
                 const tr = document.createElement('tr');
                 tableBoard.appendChild(tr);
-                images = item[2];
+                images = item.images;
                 images.forEach(function(image, i, images) {
 
                     const tagImg = document.createElement('img');
@@ -177,7 +177,7 @@ const Catalog =
                     tagImg.dataset.full_image_url=this.getImagesPathBig() + '\\' + image;
                     tagImg.dataset.img_num = i;
                     tagImg.dataset.img_count = images.length - 1;
-                    tagImg.dataset.prod_id = item[0];
+                    tagImg.dataset.prod_id = item.id;
 
                     const td = document.createElement('td');
                     td.classList.add("imageProduct");
