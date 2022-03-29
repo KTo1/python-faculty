@@ -12,16 +12,16 @@ const Basket =
     {
         goods: [],
         add(id, name, count, price){
-            this.goods.push([id, name, count, price]);      
+            this.goods.push({id:id, name:name, count:count, price:price});
         },
         clear(){
             this.goods = []
         },
         countBasketPrice(){
-            return this.goods.reduce((total, item) => total + item[2] * item[3], 0);
+            return this.goods.reduce((total, item) => total + item.count * item.price, 0);
         },
         countBasket(){
-            return this.goods.reduce((total, item) => total + item[2], 0);
+            return this.goods.reduce((total, item) => total + item.count, 0);
         },
     };
 

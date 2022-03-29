@@ -11,7 +11,7 @@ const Catalog =
     {
         goods: [],
         add(id, name, count, price){
-            this.goods.push([id, name, count, price]);      
+            this.goods.push({id:id, name:name, count:count, price:price});
         },
         clear(){
             this.goods = []
@@ -22,7 +22,7 @@ const Catalog =
 
             this.goods.forEach(function(item, i, goods) {
                 const divProduct = document.createElement('div');
-                divProduct.textContent = item[1];
+                divProduct.textContent = item.name;
                 Container.appendChild(divProduct);                
             });            
         },
