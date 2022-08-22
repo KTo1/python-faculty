@@ -15,7 +15,7 @@ def create_app():
 
     lm.init_app(app)
 
-    from flask_blog.main.ruotes import main
+    from flask_blog.main.routes import main
     app.register_blueprint(main)
 
     app.config.from_object(Config)
