@@ -15,6 +15,7 @@ def create_app():
     print(__name__)
     app = Flask(__name__)
 
+    db.init_app(app)
     lm.init_app(app)
     bcrypt.init_app(app)
 
