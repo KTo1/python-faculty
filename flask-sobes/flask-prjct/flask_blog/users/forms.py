@@ -34,7 +34,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Войти')
 
 
-class UpdateAccountForm(FlaskForm):
+class UpdateProfileForm(FlaskForm):
 
     username = StringField('Имя пользователя: ', validators=[DataRequired(), Length(min=3, max=30)])
     email = StringField('Почта: ', validators=[DataRequired(), Email()])
@@ -43,7 +43,7 @@ class UpdateAccountForm(FlaskForm):
     submit = SubmitField('Обновить')
 
     def validate_username(self, username):
-        if username.date != current_user.username:
+        if username.data != current_user.username:
             user = User.query.filter_by(username=username.data).first()
             if user:
                 ValidationError('Это имя уже занято.')
@@ -64,6 +64,7 @@ class RequestResetForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user is None:
             ValidationError('Пользователь с таким email не найден! Вы можете использовать его для регистрации. ')
+
 
 class ResetPasswordForm(FlaskForm):
     password = PasswordField('Пароль: ', validators=[DataRequired()])
