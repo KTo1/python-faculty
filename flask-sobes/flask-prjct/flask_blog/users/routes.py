@@ -2,7 +2,7 @@ from flask_blog import db, bcrypt
 from flask_login import current_user, login_user, logout_user, login_required
 from flask import render_template, Blueprint, redirect, url_for, flash, request
 
-from flask_blog.models import User
+from flask_blog.models import User, Post
 from flask_blog.users.forms import RegistrationForm, LoginForm, UpdateProfileForm
 from flask_blog.users.utils import save_picture
 
@@ -18,7 +18,7 @@ def logout():
 @users.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('posts.allpost'))
+        return redirect(url_for('posts.all_posts'))
 
     form = LoginForm()
 
@@ -28,7 +28,7 @@ def login():
             login_user(user, form.remember.data)
 
             next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('posts.allpost'))
+            return redirect(next_page) if next_page else redirect(url_for('posts.all_posts'))
             # return redirect(url_for('main.home'))
         else:
             flash('Войти не удалось. Пожалуйста, проверьте электронную почту и пароль', 'внимание')
@@ -89,3 +89,12 @@ def profile():
 
     return render_template('profile.html', title='Profile',
                            image_file=image_file, form=form, posts=posts)
+
+
+@users.route('/user/<string:username>')
+def user_posts(username):
+    page = request.args.get('page', 1, type=int)
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = Post.query.filter_by(author=user).order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
+
+    return render_template('all_posts.html', posts=posts, user=user)

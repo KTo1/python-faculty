@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="content" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <!-- insert the page content here -->
+      <h4 class="card-title">{{ post.title }}</h4>
+      <small>Опубликовано {{ post.date_posted.strftime('%A, %d %B %Y %I:%M %p') }}</small>
+      <br>
+      <br>
+      <p class="card-text">{{ post.content }}</p>
+
+</div>
+{% endblock %}
