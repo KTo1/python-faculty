@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="content">
+    <!-- insert the page content here -->
+    <h1>Записи блога</h1>
+
+    {% for post in posts.items %}
+    <div class="container" style="display: flex;">
+        <article class="media" style="display: flex; flex-direction: column;">
+
+        </article>
+
+        <div class="card" style="margin-bottom: 20px;">
+            <div class="card-body">
+
+                <small>Опубликовано {{ post.date_posted.strftime('%A, %d %B %Y %I:%M %p') }}</small>
+                <br>
+                <br>
+                <p class="card-text">{{ post.content }}</p>
+            </div>
+            <!-- <div class="card-footer" style="font-size: 20px;">
+              <i class="fa fa-heart-o"></i>
+              <i class="fa fa-bookmark-o"></i>
+            </div> -->
+        </div>
+    </div>
+    {% endfor %}
+
+  {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+    {% if page_num %}
+      {% if posts.page == page_num %}
+        <a class="btn btn-success mb-4" href="{{ url_for('posts.allpost', page=page_num) }}">{{ page_num }}</a>
+      {% else %}
+        <a class="btn btn-outline-success mb-4" href="{{ url_for('posts.allpost', page=page_num) }}">{{ page_num }}</a>
+      {% endif %}
+    {% else %}
+      ...
+    {% endif %}
+  {% endfor %}
+
+</div>
+{% endblock %}

@@ -18,7 +18,7 @@ def logout():
 @users.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('main.home'))
+        return redirect(url_for('posts.allpost'))
 
     form = LoginForm()
 
@@ -27,7 +27,9 @@ def login():
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, form.remember.data)
 
-            return redirect(url_for('main.home'))
+            next_page = request.args.get('next')
+            return redirect(next_page) if next_page else redirect(url_for('posts.allpost'))
+            # return redirect(url_for('main.home'))
         else:
             flash('Войти не удалось. Пожалуйста, проверьте электронную почту и пароль', 'внимание')
 

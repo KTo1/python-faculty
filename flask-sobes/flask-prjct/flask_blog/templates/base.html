@@ -22,18 +22,14 @@
         <div id="menubar">
             <ul id="menu">
                 <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-                <li {% if url_for(request.endpoint)==
-                "/" %} class="selected" {% endif %}><a href="/">Главная</a></li>
+                <li {% if url_for(request.endpoint)=="/home" %} class="selected" {% endif %}><a href="/">Главная</a></li>
                 {% if current_user.is_authenticated %}
-                <li {% if url_for(request.endpoint)==
-                "/login" %} class="selected" {% endif %}><a href="profile">Профиль</a></li>
-                <li {% if url_for(request.endpoint)==
-                "/register" %} class="selected" {% endif %}><a href="logout">Выход</a></li>
+                <li {% if url_for(request.endpoint)=="/login" %} class="selected" {% endif %}><a href="profile">Профиль</a></li>
+                <li {% if url_for(request.endpoint)=="/register" %} class="selected" {% endif %}><a href="logout">Выход</a></li>
+                <li {% if url_for(request.endpoint)=="/allpost" %} class="selected" {% endif %}><a href="allpost">Записи блога</a></li>
                 {% else %}
-                <li {% if url_for(request.endpoint)==
-                "/login" %} class="selected" {% endif %}><a href="login">Вход</a></li>
-                <li {% if url_for(request.endpoint)==
-                "/register" %} class="selected" {% endif %}><a href="register">Регистрация</a></li>
+                <li {% if url_for(request.endpoint)=="/login" %} class="selected" {% endif %}><a href="login">Вход</a></li>
+                <li {% if url_for(request.endpoint)=="/register" %} class="selected" {% endif %}><a href="register">Регистрация</a></li>
                 {% endif %}
                 <li><a href="page.html">A Page</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -44,17 +40,13 @@
     <div id="site_content">
         <div class="sidebar">
             <!-- insert your sidebar items here -->
-            <h3>Latest News</h3>
-            <h4>New Website Launched</h4>
-            <h5>January 1st, 2010</h5>
-            <p>2010 sees the redesign of our website. Take a look around and let us know what you think.<br/><a
-                    href="#">Read more</a></p>
+            <h3>Последние новости</h3>
+            <h4>Запуск сайта</h4>
+            <h5>January 1st, 2022</h5>
+            <p>2022 мы открылись!<br/><a
+                    href="#">Читать далее</a></p>
             <p></p>
-            <h4>New Website Launched</h4>
-            <h5>January 1st, 2010</h5>
-            <p>2010 sees the redesign of our website. Take a look around and let us know what you think.<br/><a
-                    href="#">Read more</a></p>
-            <h3>Useful Links</h3>
+            <h3>Полезные ссылки</h3>
             <ul>
                 <li><a href="#">link 1</a></li>
                 <li><a href="#">link 2</a></li>
