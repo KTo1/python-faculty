@@ -32,7 +32,6 @@
                 <li {% if request.url_rule.endpoint=="users.login" %} class="selected" {% endif %}><a href="{{ url_for('users.login') }}">Вход</a></li>
                 <li {% if request.url_rule.endpoint=="users.register" %} class="selected" {% endif %}><a href="{{ url_for('users.register') }}">Регистрация</a></li>
                 {% endif %}
-                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
