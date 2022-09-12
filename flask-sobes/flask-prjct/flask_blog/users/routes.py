@@ -3,8 +3,9 @@ from flask_login import current_user, login_user, logout_user, login_required
 from flask import render_template, Blueprint, redirect, url_for, flash, request
 
 from flask_blog.models import User, Post
-from flask_blog.users.forms import RegistrationForm, LoginForm, UpdateProfileForm
+from flask_blog.users.forms import RegistrationForm, LoginForm, UpdateProfileForm, RequestResetForm
 from flask_blog.users.utils import save_picture
+from flask_blog.users.utils import send_reset_email
 
 users = Blueprint('users', __name__)
 
@@ -98,3 +99,20 @@ def user_posts(username):
     posts = Post.query.filter_by(author=user).order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
 
     return render_template('all_posts.html', posts=posts, user=user)
+
+
+@users.route('/reset_password', methods=['GET', 'POST'])
+def reset_password():
+    if current_user.is_authenticated:
+        return redirect(url_for('posts.all_posts'))
+
+    form = RequestResetForm()
+
+    if form.validate_on_submit():
+        user = User.query.filter_by(email=form.email.data).first()
+        send_reset_email(user)
+        flash('На почту отправлено письмо с инструкциями (проверьте папку спам).', 'info')
+
+        return redirect(url_for('users.login'))
+
+    return render_template('reset_request.html', title='Сброс пароля', form=form)
