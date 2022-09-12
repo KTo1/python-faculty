@@ -3,7 +3,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from flask import render_template, Blueprint, redirect, url_for, flash, request
 
 from flask_blog.models import User, Post
-from flask_blog.users.forms import RegistrationForm, LoginForm, UpdateProfileForm, RequestResetForm
+from flask_blog.users.forms import RegistrationForm, LoginForm, UpdateProfileForm, RequestResetForm, ResetPasswordForm
 from flask_blog.users.utils import save_picture
 from flask_blog.users.utils import send_reset_email
 
@@ -115,4 +115,29 @@ def reset_password():
 
         return redirect(url_for('users.login'))
 
-    return render_template('reset_request.html', title='Сброс пароля', form=form)
+    return render_template('reset_password.html', title='Сброс пароля', form=form)
+
+
+@users.route('/reset_password/<token>', methods=['GET', 'POST'])
+def reset_token(token):
+    if current_user.is_authenticated:
+        return redirect(url_for('posts.all_posts'))
+
+    user = User.verify_reset_token(token)
+
+    if user is None:
+        flash('Токен просрочен или недействителен.', 'warning')
+        return redirect(url_for('users.reset_password'))
+
+    form = ResetPasswordForm()
+
+    if form.validate_on_submit():
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        user.password = hashed_password
+        db.session.commit()
+
+        flash('Пароль установлен, можете войти на сайт.', 'success')
+
+        return redirect(url_for('users.login'))
+
+    return render_template('reset_token.html', title='Сброс пароля', form=form)

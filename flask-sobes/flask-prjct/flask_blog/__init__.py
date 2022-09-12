@@ -17,6 +17,8 @@ def create_app():
     print(__name__)
     app = Flask(__name__)
 
+    app.config.from_object(Config)
+
     db.init_app(app)
     lm.init_app(app)
     bcrypt.init_app(app)
@@ -29,7 +31,5 @@ def create_app():
     app.register_blueprint(main)
     app.register_blueprint(users)
     app.register_blueprint(posts)
-
-    app.config.from_object(Config)
 
     return app
