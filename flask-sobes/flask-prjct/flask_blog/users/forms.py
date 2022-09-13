@@ -57,7 +57,6 @@ class UpdateProfileForm(FlaskForm):
 
 class RequestResetForm(FlaskForm):
     email = StringField('Почта: ', validators=[DataRequired(), Email()])
-
     submit = SubmitField('Изменить пароль')
 
     def validate_email(self, email):
@@ -70,4 +69,4 @@ class ResetPasswordForm(FlaskForm):
     password = PasswordField('Пароль: ', validators=[DataRequired()])
     confirm_password = PasswordField('Подтвердите пароль: ', validators=[DataRequired(), EqualTo('password')])
 
-    submit = SubmitField('Установить новый пароль')
+    submit = SubmitField('Установить')

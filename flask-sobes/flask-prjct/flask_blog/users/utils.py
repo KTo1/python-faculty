@@ -1,7 +1,9 @@
 import os
 from PIL import Image
 from secrets import token_hex
-from flask import current_app
+from flask import current_app, url_for
+from flask_mail import Message
+from flask_blog import mail
 
 
 def save_picture(form_picture):
@@ -17,3 +19,14 @@ def save_picture(form_picture):
     image.close()
 
     return picture_fn
+
+
+def send_reset_email(user):
+    token = user.get_reset_token()
+
+    msg = Message('Запрос на сброс пароля', sender='kto.eto@mail.ru', recipients=[user.email])
+    msg.body = f'''Чтобы сбросить пароль,
+                перейдите по следующей ссылке: {url_for('users.reset_token', token=token, _external=True)}. 
+                Если вы не делали этот запрос тогда просто проигнорируйте это письмо.'''
+
+    mail.send(msg)
