@@ -1,0 +1,47 @@
+version: '3.1'
+
+services:
+  db:
+    env_file:
+      - .env
+    image: postgres:13.1
+    privileged: true
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+  # adminer так просто не запустить ) на другом порту не стартует
+  adminer:
+    image: adminer:4.7.8-standalone
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+  backend:
+    container_name: 'my back django'
+    build:
+      context: ./todo
+    ports:
+      - 8000:8000
+#    command: bash -c "while !</dev/tcp/db/5432; do sleep 1; done; python manage.py migrate; python manage.py create_users; python manage.py runserver 0.0.0.0:8000"
+    command: bash -c "while !</dev/tcp/db/5432; do sleep 1; done; python manage.py migrate; python manage.py create_users; gunicorn todo.wsgi -b 0.0.0.0:8000"
+    depends_on:
+      - db
+  nginx:
+    build: ./nginx
+    ports:
+      - 8800:80
+    depends_on:
+      - backend
+  frontend:
+    build: ./frontend
+    ports:
+      - 80:80
+    depends_on:
+      - nginx
+
+

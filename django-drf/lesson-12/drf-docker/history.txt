@@ -1,0 +1,117 @@
+Развертывание в докер и докер компос. 
+
+docker.com ставим докер и докер компос 
+hub.docker.com репозиторий образов
+
+Команды: 
+	все работающие образы
+		docker ps -a
+	все работающие образы конкретного компоса	
+		docker-compose docker -f docker-compose.yml ps -a 
+	удалить образ
+		docker rmi <name>
+		
+	сборка
+		видимо
+		docker-compose -f docker-compose.yml up 
+		невидимо
+		docker-compose -f docker-compose.yml up -d 
+		
+		пересобрать
+		docker-compose -f docker-compose.yml up -d --build
+
+		уронить
+		docker-compose -f docker-compose.yml down 
+
+
+1. Готовим проект.
+	1.1 Т.к. будем юзать простги, ставим: pip install psycopg2-binary 
+	1.2 в исходном проекте обновляем: pip freeze > requirements.txt
+	1.3 копируем бек (todo)
+	1.4 в файле App.js меняем адрес на новый адрес бека и собираем фронт, копируем фрон (frontend/build)	
+	
+2. создаем папку для сервера nginx 	
+3. создаем файл todo\docker-compose.yml
+
+Теперь бек:
+
+4. в настройках todo\todo\settings.py добвляем адрес 
+	CORS_ALLOWED_ORIGINS = [
+		'http://localhost:3000',
+		'http://127.0.0.0:3000',
+		'http://0.0.0.0:80',
+		'http://192.168.25.109:8000',
+	]
+	
+	CORS_ALLOW_ALL_ORIGINS = True
+	
+	
+	В файле .env = WORK_ON_LOCAL_SERVER = 0
+	
+	WORK_ON_LOCAL_SERVER = int(os.getenv('WORK_ON_LOCAL_SERVER'))
+	if WORK_ON_LOCAL_SERVER:
+		DATABASES = {
+			'default': {
+				'ENGINE': 'django.db.backends.sqlite3',
+				'NAME': BASE_DIR / 'db.sqlite3',
+			}
+		}
+	else:
+		DATABASES = {
+			'default': {
+				'ENGINE': 'django.db.backends.postgresql',
+				'HOST': 'db',
+				'NAME': 'todo',
+				'USER': 'todo_db',
+				'PASSWORD': '1',
+				'PORT': '5432'
+			}
+		}
+	
+5. создаем todo\Dockerfile 
+
+6. Удалить лишнее (это если убрать из компоса образ, в примере это adminer)
+docker-compose up --build --remove-orphans
+
+Теперь nginx 
+7. Создаем nginx\Dockerfile
+8. Создаем nginx\nginx.conf
+9. Создаем frontend\Dockerfile
+10. Создаем frontend\nginx.conf
+
+пересобираем
+
+
+
+**********************************************************
+Собираем образ бека
+
+переходим в todo 
+запускаем (точка в конце)))
+docker build -t django_backend:1.0.0 .
+
+далее в докер компосе заменяем 
+    build:
+      context: ./todo
+
+    build:
+      image: django_backend:1.0.0
+	  
+	  
+sudo docker tag django_backend:1.0.0 kto/django_backend:1.0.0	  
+sudo docker login 
+sudo docjer push kto/django_backend:1.0.0 	  
+
+
+волюмы
+
+команда:
+	docker volume | grep "date-psql"
+
+Пример:
+	docker-compose (volume).yml
+
+1. прописываем волюмы
+2. собираем все.
+3. можно из компоса удалить строки где база заполняется, миграции и криэйт юзеры, например
+command: bash -c "while !</dev/tcp/db/5432; do sleep 1; done; gunicorn todo.wsgi -b 0.0.0.0:8000"
