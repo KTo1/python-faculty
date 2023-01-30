@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block menu %}
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="/">Главная</a></li>
+          <li class="selected"><a href="/courses">Курсы</a></li>
+          <li><a href="/students">Студенты</a></li>
+          <li><a href="/schedules">Расписания</a></li>
+          <li><a href="/contact">Связаться</a></li>
+        </ul>
+{% endblock %}
+{% block content %}
+<!-- insert the page content here -->
+<h1>Доступные курсы</h1>
+<h4><a href="/add-category/">Добавить категорию</a></h4>
+
+{% if objects_list %}
+<h4>Список курсов по категориям:</h4>
+<ul>
+    {% for category_dict in objects_list %}
+        {% set category = category_dict.category %}
+        {% set level = category_dict.level %}
+        {% set len = category_dict.len %}
+<!--        <li>{{ level }} {{ category.name }} ({{ category.courses|length }}) (<a href="/courses-category/?id={{ category.id }}">Показать курсы</a>) (<a href="/add-category/?category_id={{ category.id }}">Добавить подкатегорию</a>)</li>-->
+        <li>{{ level }} {{ category.name }} ({{ len }}) (<a href="/courses-category/?id={{ category.id }}">Показать курсы</a>) </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
