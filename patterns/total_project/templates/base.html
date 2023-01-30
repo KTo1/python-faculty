@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Дышите_Не_дышите_Выносите</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="{{ static }}css/style.css">
+  <link rel="icon" href="{{ static }}images/favicon.png">
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Дышите<span class="logo_colour">_Не_дышите</span><span class="logo_colour2">_Выносите</span></a></h1>
+          <h2>Курсы обучения фридайвингу.</h2>
+        </div>
+      </div>
+
+      <div id="menubar">
+        {% block menu %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Последние новости</h3>
+        <h4>Наш сайт запущен!</h4>
+        <h5>Август 1, 2014</h5>
+        <p>2014 запущен наш новый сайт! Посмотрите как он вам?!<br /><a href="#">Читать далее</a></p>
+        <p></p>
+        <h4>Новые курсы</h4>
+        <h5>Сентябрь 1, 2014</h5>
+        <p>Мы добавили множество новых курсов!.<br /><a href="#">Читать далее</a></p>
+        <h3>Полезные ссылки</h3>
+        <ul>
+          <li><a href="#">link 1</a></li>
+          <li><a href="#">link 2</a></li>
+          <li><a href="#">link 3</a></li>
+          <li><a href="#">link 4</a></li>
+        </ul>
+        <h3>Поиск</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Введите фразу....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="{{ static }}images/search.png" alt="Search" title="Найти" />
+          </p>
+        </form>
+      </div>
+
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+
+    </div>
+
+    {% block footer %}
+    <div id="footer">
+      Copyright &copy; black_pink_white | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | from <a href="http://www.html5webtemplates.co.uk">free HTML5 templates</a>
+    </div>
+    {% endblock %}
+  </div>
+</body>
+</html>
